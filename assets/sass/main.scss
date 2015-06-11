@@ -14,7 +14,7 @@ $trs: all .5s;
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 1em;
   font-weight: normal;
 
   color: $color;
@@ -45,9 +45,14 @@ a {
 
   width: $width;
   margin: 0 auto;
+
+  @extend .clearfix;
 }
 
 header {
+  height: 50px;
+
+  background-color: blue;
   .logo {
     display: block;
 
@@ -56,31 +61,43 @@ header {
       max-width: 100%;
     }
   }
+  nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    ul {
+      display: block;
+      li {
+        display: inline-block;
+      }
+    }
+  }
 }
 
 
-.backhead {
-  z-index: -50;
-
+section {
   width: 100%;
-
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.bkblock0n {
-  position: absolute;
-  top: 0;
-
-  height: 170px;
-}
-
-
-.container {
-  width: $width;
   padding: 0 0 $footer;
 }
-
-
+article {
+  padding: 2em 0;
+  h3 {
+    font-size: 2em;
+    text-align: center;
+    margin: 0 auto 1em;
+    color: #fff;
+  }
+}
+.services {
+  background-color: grey;
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+      width: 48%;
+    }
+  }
+}
 
 
 
