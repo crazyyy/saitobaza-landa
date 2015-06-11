@@ -16,6 +16,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   font-weight: normal;
+  line-height: 1.8;
 
   color: $color;
 }
@@ -83,22 +84,179 @@ article {
   padding: 2em 0;
   h3 {
     font-size: 2em;
-    text-align: center;
+
     margin: 0 auto 1em;
+
+    text-align: center;
+
     color: #fff;
   }
 }
 .services {
-  background-color: grey;
   ul {
+    margin: 0 auto 1em;
+    padding: 0;
+
     text-align: center;
     li {
+      position: relative;
+
       display: inline-block;
+
       width: 48%;
+      padding: 0 0 0 1.5em;
+
+      text-align: left;
+
+      color: #fff;
+      &:before {
+        position: absolute;
+        top: 5px;
+        left: 0;
+
+        display: block;
+
+        content: '';
+
+        color: orange;
+
+        @extend .fa;
+      }
+    }
+  }
+  h1 {
+    font-size: 2em;
+
+    text-align: center;
+
+    color: #fff;
+  }
+}
+.prices {
+  .column-left,
+  .column-right {
+    display: inline-block;
+    float: left;
+
+    @extend .clearfix;
+  }
+  .column-left {
+    width: 70%;
+    h2 {
+      font-size: 1.5em;
+
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    table {
+      position: relative;
+
+      float: left;
+
+      width: 80%;
+      margin: 0;
+      &:after {
+        font-size: 2em;
+        line-height: 2.8em;
+
+        position: absolute;
+        top: 0;
+        right: -1em;
+
+        display: block;
+
+        width: 1px;
+        height: 100%;
+
+        content: '    ';
+
+        color: orange;
+
+        @extend .fa;
+      }
+      td {
+        font-size: 1.4em;
+
+        width: 20%;
+        padding: 1em 0;
+
+        text-align: center;
+        vertical-align: middle;
+
+        color: #000;
+        border: 2px solid transparent;
+        border-bottom: 2px solid #000;
+        i {
+          font-size: .8em;
+
+          @extend .fa;
+        }
+        &:first-child {
+          font-size: 1em;
+          font-weight: bold;
+
+          width: 60%;
+
+          text-align: left;
+        }
+        &:nth-child(2) {
+          text-decoration: line-through;
+
+          color: lighten(#000, 20%);
+          font-size: 1em;
+        }
+        &:last-child {
+          font-weight: bold;
+
+          color: red;
+        }
+      }
+      tr {
+        &:first-child {
+          th {
+            font-size: .8em;
+            line-height: 1;
+
+            vertical-align: middle;
+          }
+        }
+        &:last-child {
+          td {
+            border-bottom-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .column-right {
+    width: 30%;
+    padding: 6em 0px 0;
+    h4 {
+      text-align: center;
+      margin-bottom: 1em;
+      color: red;
+      font-weight: bold;
+    }
+    form {
+      input,
+      textarea {
+        margin: 0 auto .5em;
+        padding: 0.3em;
+        font-size: 100%;
+        font-weight: normal;
+      }
+      button {
+        text-transform: uppercase;
+        font-size: 80%;
+        padding: 1.5em 0px;
+        text-align: center;
+        display: block;
+        width: 100%;
+        border-radius: 4px;
+      }
     }
   }
 }
-
 
 
 
