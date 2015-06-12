@@ -1,6 +1,5 @@
 @import '_reset.scss';
 @import '_forms.scss';
-@import '_comments.scss';
 @import '_font_fontawesome.scss';
 @import '_font_opensans.scss';
 @import '_sprite.scss';
@@ -11,7 +10,8 @@ $footer_margin: $footer - 2 * $footer;
 $color: #444;
 $color_a: #000;
 $trs: all .5s;
-
+$tshd: 2px 2px 2px #000;
+$tshdw: 2px 2px 2px #fff;
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
@@ -31,7 +31,24 @@ a {
     color: lighten($color_a, 20%);
   }
 }
+.btn {
+  font-size: 80%;
 
+  display: block;
+
+  margin: 0 auto;
+  padding: 1.5em 0;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border-radius: 4px;
+  background-color: #333;
+  &:hover {
+    background-color: #f15123;
+  }
+}
 .wrapper {
   position: relative;
 
@@ -90,6 +107,7 @@ article {
     text-align: center;
 
     color: #fff;
+    text-shadow: $tshd;
   }
 }
 .services {
@@ -130,6 +148,7 @@ article {
     text-align: center;
 
     color: #fff;
+    text-shadow: $tshd;
   }
 }
 .prices {
@@ -148,6 +167,8 @@ article {
       margin-bottom: 1em;
 
       text-align: center;
+
+      text-shadow: $tshdw;
     }
     table {
       position: relative;
@@ -199,6 +220,8 @@ article {
           width: 60%;
 
           text-align: left;
+
+          text-shadow: $tshdw;
         }
         &:nth-child(2) {
           font-size: 1em;
@@ -369,7 +392,9 @@ article {
       }
       h6 {
         font-size: .8em;
+
         margin: 0 auto .8em;
+
         @extend .clearfix;
         span {
           float: left;
@@ -408,6 +433,13 @@ article {
       }
     }
   }
+  .view-all-pholio {
+    width: 300px;
+
+    color: #fff;
+
+    @extend .btn;
+  }
 }
 .reviews {
   h3 {
@@ -440,12 +472,12 @@ article {
       @extend .clearfix;
       img {
         display: block;
+        overflow: hidden;
 
         width: 100px;
         height: 100px;
 
         border-radius: 50%;
-        overflow: hidden;
       }
       h5,
       p {
@@ -489,6 +521,56 @@ article {
       &:nth-child(4) {
         background-image: url(../img/bg/reviews-4.jpg);
       }
+    }
+  }
+}
+.calculator {
+  h3 {
+    color: orange;
+    text-shadow: 2px 2px 2px #000;
+  }
+  form {
+    width: 90%;
+
+    @extend .clearfix;
+    input {
+      float: left;
+
+      width: 50%;
+      height: 80px;
+      &[name=email] {
+        margin-bottom: 1em;
+      }
+    }
+    textarea {
+      font-size: 140%;
+
+      float: right;
+
+      width: 50%;
+      height: 160px;
+      margin-bottom: 1em;
+    }
+    button {
+      float: left;
+
+      width: 100%;
+      i {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+.scheme {
+  ul {
+    display: block;
+
+    @extend .clearfix;
+    li {
+      display: inline-block;
+      float: left;
+
+      width: 33.33%;
     }
   }
 }
