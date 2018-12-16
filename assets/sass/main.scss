@@ -4,6 +4,7 @@
 @import '_font_opensans.scss';
 @import '_sprite.scss';
 @import '_mixin.scss';
+@import '_flexslider.scss';
 $width: 980px;
 $footer: 100px;
 $footer_margin: $footer - 2 * $footer;
@@ -449,25 +450,26 @@ article {
     display: block;
     overflow: hidden;
 
-    width: 80%;
-    height: 350px;
+    width: 80% !important;/*
+    height: 350px; */
+    height: 175px;
     margin: 0 auto;
 
     @extend .clearfix;
     li {
-      display: inline-block;
-      float: left;
-
-      width: 100%;
-      height: 48%;
+      /*       display: inline-block; */
+      /*       float: left; */
+      /*       width: 100%; */
+      height: 175px;/*
       margin-bottom: 1.9%;
-      padding: 1em;
+      padding: 1em; */
 
       color: #fff;
       border-radius: 5px;
-      background-repeat: no-repeat;
-      background-position: center top;
-      background-size: cover;
+      background-color: grey;
+      /*       background-repeat: no-repeat;
+background-position: center top;
+background-size: cover; */
 
       @extend .clearfix;
       img {
@@ -492,7 +494,7 @@ article {
         font-size: .95em;
       }
       &:nth-child(2n+1) {
-        background-image: url(../img/bg/reviews-1.jpg);
+        /* background-image: url(../img/bg/reviews-1.jpg); */
         img {
           float: left;
         }
@@ -504,7 +506,7 @@ article {
         }
       }
       &:nth-child(2n) {
-        background-image: url(../img/bg/reviews-2.jpg);
+        /* background-image: url(../img/bg/reviews-2.jpg); */
         img {
           float: right;
         }
@@ -516,12 +518,15 @@ article {
         }
       }
       &:nth-child(3) {
-        background-image: url(../img/bg/reviews-3.jpg);
+        /* background-image: url(../img/bg/reviews-3.jpg); */
       }
       &:nth-child(4) {
-        background-image: url(../img/bg/reviews-4.jpg);
+        /* background-image: url(../img/bg/reviews-4.jpg); */
       }
     }
+  }
+  .flex-direction-nav {
+    display: none;
   }
 }
 .calculator {
@@ -682,10 +687,11 @@ article {
 .paymethods {
   color: #fff;
   text-shadow: $tshd;
-  a{
+  a {
+    text-decoration: none;
+
     color: red;
     border-bottom: 1px dotted red;
-    text-decoration: none;
   }
   ul,
   ol {

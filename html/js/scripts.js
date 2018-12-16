@@ -1,0 +1,1 @@
+$(window).load(function(){$(".reviews").flexslider({animation:"slide",animationLoop:!0,randomize:!0,controlNav:!1,itemWidth:770,maxItems:1,pauseOnHover:!0})});
